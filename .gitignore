@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+TestResults/
+coverage.xml
+*.db
+*.db-shm
+*.db-wal
+.sonarqube/
