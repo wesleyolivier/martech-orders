@@ -1,0 +1,58 @@
+name: martech-orders
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: martech-orders-api:local
+    container_name: martech-orders-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      ConnectionStrings__Orders: Data Source=/data/orders.db
+      Jwt__Issuer: martech-orders
+      Jwt__Audience: martech-orders-clients
+      Jwt__SigningKey: ${JWT_SIGNING_KEY:-compose-development-signing-key-change-me}
+      Jwt__ExpiryMinutes: "60"
+      Authentication__SeedUser__Email: ${SEED_USER_EMAIL:-dev@martech.com}
+      Authentication__SeedUser__Password: ${SEED_USER_PASSWORD:-Senha@123}
+      Authentication__SeedUser__DisplayName: MarTech Developer
+    volumes:
+      - orders-data:/data
+
+  sonarqube:
+    image: sonarqube:community
+    container_name: martech-orders-sonarqube
+    profiles: ["quality"]
+    ports:
+      - "9000:9000"
+    environment:
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+    volumes:
+      - sonarqube-data:/opt/sonarqube/data
+      - sonarqube-extensions:/opt/sonarqube/extensions
+      - sonarqube-logs:/opt/sonarqube/logs
+
+  sonar-scanner:
+    image: mcr.microsoft.com/dotnet/sdk:10.0
+    container_name: martech-orders-sonar-scanner
+    profiles: ["quality"]
+    depends_on:
+      - sonarqube
+    environment:
+      SONAR_HOST_URL: http://sonarqube:9000
+      SONAR_TOKEN: ${SONAR_TOKEN:-}
+      SONAR_PROJECT_KEY: ${SONAR_PROJECT_KEY:-martech-orders}
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    entrypoint: ["/bin/bash", "/workspace/docker/run-sonar-scanner.sh"]
+
+volumes:
+  orders-data:
+  sonarqube-data:
+  sonarqube-extensions:
+  sonarqube-logs:
