@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarTech.Orders.Domain", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarTech.Orders.Application", "src\MarTech.Orders.Application\MarTech.Orders.Application.csproj", "{01592BD7-5CCB-4B3C-A684-83C9F6F18498}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarTech.Orders.Infrastructure", "src\MarTech.Orders.Infrastructure\MarTech.Orders.Infrastructure.csproj", "{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,18 @@ Global
 		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|x64.Build.0 = Release|Any CPU
 		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|x86.ActiveCfg = Release|Any CPU
 		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|x86.Build.0 = Release|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Debug|x64.Build.0 = Debug|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Debug|x86.Build.0 = Debug|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Release|x64.ActiveCfg = Release|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Release|x64.Build.0 = Release|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Release|x86.ActiveCfg = Release|Any CPU
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +64,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DA7B4A88-824B-4F1A-944D-6F4ECBDE7433} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{01592BD7-5CCB-4B3C-A684-83C9F6F18498} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{9DBE92E5-79B2-4C64-BC0D-F03F8423E24E} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
