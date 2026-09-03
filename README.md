@@ -26,6 +26,8 @@ dotnet restore
 dotnet run --project src/MarTech.Orders.Api
 ```
 
+Para abrir a solution no Visual Studio, é preciso a versão 18.0 (2026) ou superior: a 17.x não suporta `net10.0` e falha com `NETSDK1045` antes de compilar. Pela linha de comando o SDK sozinho basta, sem IDE.
+
 A API sobe em `http://localhost:5080`. As migrations são aplicadas automaticamente na inicialização e o arquivo `orders.db` é criado na pasta do projeto da API.
 
 Documentação interativa (apenas fora de Production): `http://localhost:5080/scalar`
