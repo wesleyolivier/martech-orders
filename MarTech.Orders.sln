@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarTech.Orders.Domain", "src\MarTech.Orders.Domain\MarTech.Orders.Domain.csproj", "{DA7B4A88-824B-4F1A-944D-6F4ECBDE7433}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarTech.Orders.Application", "src\MarTech.Orders.Application\MarTech.Orders.Application.csproj", "{01592BD7-5CCB-4B3C-A684-83C9F6F18498}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +31,24 @@ Global
 		{DA7B4A88-824B-4F1A-944D-6F4ECBDE7433}.Release|x64.Build.0 = Release|Any CPU
 		{DA7B4A88-824B-4F1A-944D-6F4ECBDE7433}.Release|x86.ActiveCfg = Release|Any CPU
 		{DA7B4A88-824B-4F1A-944D-6F4ECBDE7433}.Release|x86.Build.0 = Release|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Debug|x64.Build.0 = Debug|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Debug|x86.Build.0 = Debug|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|x64.ActiveCfg = Release|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|x64.Build.0 = Release|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|x86.ActiveCfg = Release|Any CPU
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DA7B4A88-824B-4F1A-944D-6F4ECBDE7433} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{01592BD7-5CCB-4B3C-A684-83C9F6F18498} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
